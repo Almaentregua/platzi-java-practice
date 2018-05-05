@@ -43,4 +43,8 @@ public class OuterClass {
         Local local = new Local();
         local.run();
     }
+
+    public abstract class AbstractClass{
+        public abstract void hereIAm();
+    }
 }

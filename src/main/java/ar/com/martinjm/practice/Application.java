@@ -20,5 +20,15 @@ public class Application {
         //Test class in a method
         OuterClass.hereIAm();
 
+        //Test class abstract
+        OuterClass.AbstractClass abstractClass = outerClass.new AbstractClass() {
+            @Override
+            public void hereIAm() {
+                System.out.println("I am in an anonymous class\n");
+            }
+        };
+
+        abstractClass.hereIAm();
+
     }
 }
