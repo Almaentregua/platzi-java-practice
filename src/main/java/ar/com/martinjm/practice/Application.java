@@ -1,14 +1,35 @@
 package ar.com.martinjm.practice;
 
+import ar.com.martinjm.practice.Model.Movie;
 import ar.com.martinjm.practice.anonymousclasses.AbstractClass;
 import ar.com.martinjm.practice.anonymousclasses.FuncionalInterfaceA;
 import ar.com.martinjm.practice.nestedclasses.OuterClass;
 
+import java.util.ArrayList;
+
 public class Application {
     public static void main(String args[]){
-        nestedClasses();
-        anonymousClass();
+ //       nestedClasses();
+ //       anonymousClass();
+        connectionJdbc();
+    }
 
+
+    /**
+     * Practice Jdbc basic
+     * @author: Martin, Juan
+     */
+    public static void connectionJdbc(){
+        ArrayList<Movie> movieList = Movie.getMovies();
+        for (Movie movie:movieList
+                ) {
+            System.out.println("Title: " + movie.getTitle());
+            System.out.println("Creator: " + movie.getCreator());
+            System.out.println("Duration: " + movie.getDuration());
+            System.out.println("Genre: " + movie.getGenre());
+            System.out.println("Year: " +  movie.getYear());
+            System.out.println("");
+        }
     }
 
 
